@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Navbar</title>
+  
+</head>
+<body>
+  <nav class="navbar">
+    <div class="left-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="Travel Logo" class="logo" />
+      <input type="text" placeholder="Search destinations..." class="search-box" />
+    </div>
+    <div class="right-section" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Services</a>
+      <a href="#">Packages</a>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+
+<!-- main section  -->
+
+<section class="main-section">
+  <div class="text-content">
+    <h1 class="title">Travel and Tourism</h1>
+    <p class="subtitle">Explore the world with style, comfort, and unforgettable experiences.</p>
+  </div>
+  <div class="image-content">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Travel Image" />
+  </div>
+</section>
+
+
+<!-- main section close -->
+
+
+<h1 style="margin-top: 20px; margin-left: 20px;">Top Place to visit</h1>
+
+<!-- top place to visit -->
+<section class="destinations">
+
+  <div class="place">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+    <h2>Paris, France</h2>
+    <button onclick="toggleInfo(this)">MORE</button>
+    <p class="info">Explore the Eiffel Tower, cozy cafés, and romantic streets of Paris.</p>
+  </div>
+
+
+  <div class="place">
+    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401" alt="New York">
+    <h2>New York, USA</h2>
+    <button onclick="toggleInfo(this)">MORE</button>
+    <p class="info">Discover skyscrapers, Broadway, and the vibrant life of New York City.</p>
+  </div>
+
+  <script type="text/javascript">
+    
+function toggleInfo(btn) {
+    const info = btn.nextElementSibling;
+    info.classList.toggle('show');
+    btn.textContent = info.classList.contains('show') ? 'LESS' : 'MORE';
+  }
+  </script>
+
+</section>
+
+
+
+
+<h2 class="classic-heading">Tour Package and Details</h2>
+
+
+<!-- card section  -->
+<section class="bw-tour-cards">
+
+  <!-- Card 1 -->
+  <div class="bw-tour-card">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach Tour">
+    <div class="bw-tour-content">
+      <h3 class="bw-tour-title">Maldives Getaway</h3>
+      <p class="bw-tour-location">Maldives</p>
+      <p class="bw-tour-price">$1,200</p>
+      <p class="bw-tour-description">Relax in a luxurious beachside resort with crystal clear waters and serene sunsets.</p>
+      <button>Book Now</button>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="bw-tour-card">
+    <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Desert Safari">
+    <div class="bw-tour-content">
+      <h3 class="bw-tour-title">Dubai Desert Safari</h3>
+      <p class="bw-tour-location">Dubai, UAE</p>
+      <p class="bw-tour-price">$750</p>
+      <p class="bw-tour-description">An exhilarating 4x4 ride, camel trek, and starlit dinner in the golden dunes.</p>
+      <button>Book Now</button>
+    </div>
+  </div>
+
+</section>
+
+<section class="reviews-section">
+  <h2 class="reviews-heading">What Our Travelers Say</h2>
+
+  <div class="reviews-container">
+
+
+    <blockquote class="review-card">
+      <p class="review-text">"The Swiss Alps tour was breathtaking. Well organized and cozy accommodations made it unforgettable."</p>
+      <footer class="review-author">— Faisal Sheikh</footer>
+    </blockquote>
+
+    <blockquote class="review-card">
+      <p class="review-text">"Dubai Desert Safari was thrilling and unique. The desert dinner under the stars was magical."</p>
+      <footer class="review-author">— Syed Kumail.</footer>
+    </blockquote>
+
+  </div>
+</section>
+
+<!-- footer section -->
+
+<footer class="footer-section">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <h3>About Our Tours</h3>
+      <p>Explore the world’s most beautiful destinations with our expertly curated tour packages. Luxury, adventure, and unforgettable memories await.</p>
+    </div>
+
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: info@tourworld.com</p>
+      <p>Phone: +1 (555) 123-4567</p>
+      <p>Address: 123 Travel Blvd, Adventure City</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 TourWorld. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+  <style type="text/css">
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background-color: #111;
+}
+
+.navbar {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.search-box {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  width: 200px;
+  background-color: #333;
+  color: white;
+}
+
+.right-section {
+  display: flex;
+  gap: 25px;
+}
+
+.right-section a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.right-section a:hover {
+  color: #00c6ff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-box {
+    display: none;
+  }
+
+  .right-section {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+  }
+
+  .right-section.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Mono&display=swap');
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background-color: #111;
+  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.text-content {
+  flex: 1;
+  animation: slideInLeft 1.5s ease-out;
+}
+
+.text-content .title {
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  color: #00c6ff;
+}
+
+.text-content .subtitle {
+  font-size: 1.3rem;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 2s ease-in;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+}
+
+.image-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .text-content .title {
+    font-size: 2.5rem;
+  }
+
+  .image-content {
+    margin-top: 20px;
+  }
+}
+
+/*card section */
+.bw-tour-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Keep the section height consistent */
+  min-height: 480px;
+}
+
+.bw-tour-card {
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 20px rgba(255 255 255 / 0.05);
+  width: 280px;       /* Narrow width */
+  height: 460px;      /* Taller height */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.bw-tour-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow:
+    0 12px 40px rgba(255 255 255 / 0.15),
+    0 8px 20px rgba(255 255 255 / 0.1);
+  border: 1px solid #fff;
+}
+
+.bw-tour-card img {
+  width: 100%;
+  height: 180px;  /* Fixed height image */
+  object-fit: cover;
+  filter: grayscale(100%) contrast(125%);
+  transition: filter 0.4s ease;
+}
+
+.bw-tour-card:hover img {
+  filter: grayscale(0) contrast(110%);
+}
+
+.bw-tour-content {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;  /* Push button to bottom */
+}
+
+.bw-tour-title {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  color: #fafafa;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.bw-tour-location {
+  font-size: 0.95rem;
+  color: #9a9a9a;
+  margin-bottom: 15px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.bw-tour-price {
+  font-size: 1.2rem;
+  color: #e6b422;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 0.02em;
+}
+
+.bw-tour-description {
+  font-size: 1rem;
+  color: #cfcfcf;
+  flex-grow: 1;
+  line-height: 1.45;
+  margin-bottom: 25px;
+  overflow: auto;  /* If text is too long, scroll */
+}
+
+.bw-tour-card button {
+  background-color: transparent;
+  border: 2.5px solid #e6b422;
+  color: #e6b422;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: flex-start;
+  letter-spacing: 0.04em;
+}
+
+.bw-tour-card button:hover {
+  background-color: #e6b422;
+  color: #121212;
+  border-color: #e6b422;
+}
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 920px) {
+  .bw-tour-cards {
+    flex-wrap: wrap;
+    min-height: auto;
+  }
+  .bw-tour-card {
+    width: 45%;
+    margin-bottom: 40px;
+    height: auto;
+  }
+  .bw-tour-card img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bw-tour-cards {
+    flex-direction: column;
+    gap: 28px;
+    padding: 30px 10px;
+  }
+  .bw-tour-card {
+    width: 100%;
+    height: auto;
+  }
+  .bw-tour-card img {
+    height: 180px;
+  }
+}
+
+
+/*heading section*/
+.classic-heading {
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white; 
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Simple fade-in + slide-up animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.classic-heading {
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+/* Optional: subtle underline appearing on load */
+.classic-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e6b422;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  animation: underlineExpand 1s ease forwards 1s; /* delayed start */
+}
+
+@keyframes underlineExpand {
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.reviews-section {
+  background-color: #121212;
+  color: #f0f0f0;
+  padding: 60px 20px 80px;
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+.reviews-heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #e6b422;
+  margin-bottom: 50px;
+  letter-spacing: 0.08em;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline for heading */
+.reviews-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #e6b422;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Container flex for cards */
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Review card */
+.review-card {
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(230, 180, 34, 0.15);
+  padding: 30px 28px;
+  max-width: 320px;
+  flex: 1 1 300px;
+  font-style: italic;
+  color: #dcdcdc;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(230, 180, 34, 0.3);
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  position: relative;
+  padding-left: 40px;
+}
+
+/* Stylish quote marks */
+.review-text::before {
+  content: "“";
+  font-size: 3rem;
+  color: #e6b422;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  opacity: 0.4;
+  line-height: 1;
+}
+
+.review-author {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e6b422;
+  text-align: right;
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 920px) {
+  .reviews-container {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+.footer-section {
+  background-color: #121212;
+  color: #f0f0f0;
+  padding: 60px 20px 30px;
+  font-family: 'Georgia', serif;
+}
+
+.footer-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 280px;
+  min-width: 260px;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 1.6rem;
+  color: #e6b422;
+  margin-bottom: 18px;
+  letter-spacing: 0.05em;
+}
+
+.footer-about p,
+.footer-contact p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.footer-links ul li a:hover {
+  color: #e6b422;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 18px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400&display=swap');
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+.destinations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.place {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.place:hover {
+  transform: scale(1.03);
+}
+
+.place img {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: filter 0.4s;
+}
+
+.place:hover img {
+  filter: grayscale(0%);
+}
+
+.place h2 {
+  font-family: 'Playfair Display', serif;
+  margin: 15px 0 10px;
+  font-size: 1.3em;
+}
+
+.place button {
+  background: none;
+  color: white;
+  border: 2px solid #fff;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.place button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.info {
+  display: none;
+  font-size: 0.9em;
+  color: #ccc;
+  padding: 0 15px 15px;
+}
+
+.info.show {
+  display: block;
+}
+
+
+
+
+  </style>
+
+  <script src="script.js">
+    function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+
+
+  </script>
+</body>
+</html>
